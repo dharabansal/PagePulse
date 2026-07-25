@@ -8,9 +8,10 @@ import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+
 @RestController
 @RequestMapping("/api/audit")
-@CrossOrigin(origins = "http://localhost:63342")
+@CrossOrigin(origins = "*")
 public class AuditController {
 
     private final AuditService auditService;
