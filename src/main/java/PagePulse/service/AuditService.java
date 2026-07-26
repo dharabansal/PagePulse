@@ -21,7 +21,7 @@ public class AuditService {
 
         try {
             Connection.Response pageResponse =
-                    Jsoup.connect(url).ignoreHttpErrors(true).timeout(5000)
+                    Jsoup.connect(url).ignoreHttpErrors(true).userAgent("Mozilla/5.0").timeout(5000)
                             .execute();
             String contentType = pageResponse.contentType();
             if(contentType == null || !contentType.contains("text/html")){

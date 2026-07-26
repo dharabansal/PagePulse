@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
-@RequestMapping("/api/audit")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class AuditController {
 
@@ -21,7 +21,7 @@ public class AuditController {
     }
 
 
-    @PostMapping
+    @PostMapping("/audit")
     public AuditResponse auditWebsite(@Valid @RequestBody AuditRequest request) {
 
         return auditService.analyzeWebsite(request.getUrl());

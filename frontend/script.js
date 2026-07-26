@@ -14,7 +14,7 @@ function auditWebsite(){
     `;
 
 
-    fetch("http://localhost:8080/api/audit",{
+    fetch("https://pagepulse-production-d2a3.up.railway.app/api/audit",{
 
         method:"POST",
 
